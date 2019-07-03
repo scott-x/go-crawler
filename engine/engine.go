@@ -3,7 +3,7 @@ package engine
 import (
 	"github.com/scott-x/go-crawler/fetcher"
 	"log"
-	"time"
+	//"time"
 )
 
 func Run(seed ...Request) {
@@ -18,7 +18,7 @@ func Run(seed ...Request) {
 		log.Printf("fetching url %s", r.Url)
 		body, err := fetcher.Fetch(r.Url)
 		if err != nil {
-			log.Printf("fetching url %s, %v", r.Url, err)
+			log.Printf("Fetcher Error: url %s: %v", r.Url, err)
 			continue
 		}
 		parseResult := r.ParseFunc(body)
@@ -29,7 +29,7 @@ func Run(seed ...Request) {
 			i++
 		}
 
-		time.Sleep(10 * time.Millisecond)
+		//time.Sleep(10 * time.Millisecond)
 	}
 
 }
