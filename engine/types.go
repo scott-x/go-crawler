@@ -7,7 +7,7 @@ type Request struct {
 
 type ParseResult struct{
 	Requests []Request
-	Itmes []interface{}
+	Items []interface{}
 }
 
 func NilParser([]byte) ParseResult{

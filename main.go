@@ -6,11 +6,10 @@ import (
 	"github.com/scott-x/go-crawler/zhenhun/parser"
 )
 
-func main(){
+func main() {
 	fmt.Println("running.....")
 	engine.Run(engine.Request{
-		Url: "https://www.zhenai.com/zhenghun",
+		Url:       "https://www.zhenai.com/zhenghun",
 		ParseFunc: parser.ParseCityList,
 	})
 }
-
